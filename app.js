@@ -14,12 +14,15 @@ Use simple MVC structure
 var express = require("express");
 //require the controller to control the behaviour of the app
 var todoController = require("./controllers/todoController");
-
 //set the express app
 var app = express();
 
+
+
+
 //set the ejs template engine
-app.set("view-engine", "ejs");
+//the ejs template engine looks inside every view and looks for the respective file
+app.set("view engine", "ejs");
 
 //serve static files
 //static files using middleware

@@ -4,11 +4,14 @@ F.ex mainipulate the data, handling the routes ...
 */
 
 // export the modile to the app.js file
-modulue.export = function(app){
+module.exports = function(app){
   //make the handlers for the different requests we are going to get
 
   //handler for the request for the url
+  //render a view when get request to url
   app.get("/todo", function(req, res){
+    //render page
+    res.render("todo");
 
   })
 
@@ -19,6 +22,6 @@ modulue.export = function(app){
 
   //handler for a delete request
   app.delete("/todo", function(req, res){
-    
+
   })
 }
