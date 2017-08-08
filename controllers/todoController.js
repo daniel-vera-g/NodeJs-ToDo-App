@@ -4,10 +4,10 @@ F.ex mainipulate the data, handling the routes ...
 */
 
 //require the body-parser package
-var body-parser = require("body-parser");
+var bodyParser = require("body-parser");
 
 //make array of Objects to add To-Do List item
-var data = [{item: "get milk"}, {item: "walk dog"}, {item: "kick some coding ass"}];
+var data = [];
 //middleware to run in post request 
 // parse application/x-www-form-urlencoded 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -26,7 +26,10 @@ module.exports = function(app){
 
   //handler for the post request of a Button
   app.post("/todo", urlencodedParser, function(req, res){
-
+    //push data from the body to the array containing the todo items 
+    data.push(req.body);
+    //send data back to the response and actualize array
+    res.json(data);
   })
 
   //handler for a delete request
