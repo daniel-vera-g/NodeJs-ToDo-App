@@ -33,7 +33,13 @@ module.exports = function(app){
   })
 
   //handler for a delete request
-  app.delete("/todo", function(req, res){
-
+  app.delete("/todo/:item", function(req, res){
+    // update the data in the array
+    data = data.filter(function(todo){
+      // filter out the item we are trying to delete if 
+      return todo.item.replace(/ /g, "-") !== req.params.item;
+    })
+    //send response to the page and actualize the ToDo List 
+    res.json(data);
   })
 }
