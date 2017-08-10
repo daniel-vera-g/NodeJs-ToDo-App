@@ -1,9 +1,17 @@
-# node-js-playlist
-CSS and asset files for the Net Ninja YouTube nodejs playlist
+## TO-DO Application
 
-The final project code can be found in the public/assests folder of this repo
+This Application is a simple To-Do App based on nodeJS.
+It uses HTML, CSS and Javascript as Frontend technologies.
+In the backend it uses nodeJs and mongoDb as database
 
-If you have been following the tutorial, code for each and every lesson is added in the Practice folder so you can directly download and check.
-All files have been tested.
+## Motivation
 
-If more files for  .\Practice\ should be added. They will be added very soon.
+The motivation of this project is to build my first nodeJs app and get in contact with backend technologies.
+
+## Installation
+
+Download this project to your machine and run node on it to start the server.
+
+## Contributors
+
+This project was based on the Youtube Playlist of the Codeninja Channel.
